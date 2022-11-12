@@ -1,0 +1,10 @@
+---
+
+name: kiran
+password: kiran
+uid: 99991
+comment: awesme
+home: /
+shell: /usr/sbin/nologin
+
+...

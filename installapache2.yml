@@ -1,0 +1,27 @@
+---
+- name: apache installation method
+  hosts: all
+  tasks:
+    - name: apache2 installation
+      apt:
+        name: apache2
+        state: present
+        update_cache: no
+    - name: edit the index.htmml
+      copy:
+        content: Vivek expert in Devops
+        dest: /var/www/html/index.html
+    - name: restart the apache2
+      service:
+        name: apache2
+        state: restarted
+    - name: check the servers uri respnse
+      uri:
+        url: "{{item}}"
+        status_code: 200
+      with_items:
+        - http://172.31.23.189
+        - http://172.31.18.204  
+
+
+...

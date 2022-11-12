@@ -1,0 +1,14 @@
+---
+- name: user creation
+  hosts: all
+  tasks:
+    - name: user creation
+      user:
+        name: vivek
+        password: vivek
+        uid: 3214
+        comment: expert in devops
+        home: /tmp/vivek
+        shell: /bin/bash
+
+...

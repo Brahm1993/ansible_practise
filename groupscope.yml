@@ -1,0 +1,10 @@
+---
+
+- name: using group scope variable
+  hosts: devserver
+  tasks:
+    - name: copy a file
+      copy:
+        src: "{{source}}"
+        dest: "{{destination}}"
+
